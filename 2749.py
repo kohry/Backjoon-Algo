@@ -13,21 +13,19 @@ fopen = open("inputs/2193.txt")
 #a = int(input())
 
 a = int(input())
-l = [0 for _ in range(1001)]
+l = [0 for _ in range(1000000000000000000)]
 
-l[1] = 0
+l[0] = 0
+l[1] = 1
 l[2] = 1
-l[3] = 1
-l[4] = 2
 
-if a >= 4 :
-    for i in range(3,a+4) :
+if a >= 3 :
+    for i in range(3,a+1) :
         l[i] = l[i-1] + l[i-2]
-    print(l[a] % 1000000)
+    print(l[a])%1000000
 
 else :
-    print(1)
-
+    print(l[a])
 
 
 
